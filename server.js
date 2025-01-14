@@ -1,6 +1,13 @@
 import express from 'express'
 import { PrismaClient } from '@prisma/client'
 
+
+
+function SomaNumeros(){
+    console.log (3+8)
+}
+
+
 const prisma = new PrismaClient()
 
 const app = express()
@@ -9,7 +16,7 @@ app.use(express.json())
 const listUsers = []
 
 app.post('/user',async (req,res)=> {
-    
+    SomaNumeros();
     await prisma.user.create({
         data: {
           name:  req.body.nome ,
