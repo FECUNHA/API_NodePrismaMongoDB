@@ -4,9 +4,8 @@ import { PrismaClient } from '@prisma/client'
 
 
 function SomaNumeros(){
-    console.log (3+8)
+    console.log (4+8)
 }
-
 
 const prisma = new PrismaClient()
 
@@ -27,7 +26,6 @@ app.post('/user',async (req,res)=> {
         
     listUsers.push(req.body)
     res.status(201).json('Cadastrado com sucesso!!!') 
-
 })
 
 app.get('/users',async(req,res)=> {
